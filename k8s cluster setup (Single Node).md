@@ -10,8 +10,8 @@
   - 30000-32767 - NodePort Services used by All.
 
   ```
-  systemctl disable firewall
-  systemctl stop firewall
+  systemctl disable firewalld
+  systemctl stop firewalld
 ```
 
 # 2. We need to disable the swap as it is not supported by K8s
