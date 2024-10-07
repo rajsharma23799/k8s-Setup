@@ -1,4 +1,4 @@
-# 1. Disable Firewall in case of on-prem VMs or Add security group to allow these following ports:
+# 1. Disable Firewall in case of on-prem VMs or Add security group in case of cloud to allow these following ports:
  For MASTER Node:
   - **6443** - K8s API Server used by all.
   - **2379-2380** - etcd server client API used by kube-apiserver, etcd.
