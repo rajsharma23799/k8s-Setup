@@ -103,7 +103,13 @@
   and we can get the join command for worker nodes by executing the command on master node:
   kubeadm token create --print-join-command
 ```
-# 14. For worker nodes first enable the kubelet 
+
+# 14. We need to install calico network plugin for Master node to setup communication between worker nodes
+```
+kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+```
+
+# 15. For worker nodes first enable the kubelet 
   ```
   systemclt enable kubelet
   kubeadm join 10.125.193.136:6443 --token gdze90.i4i1wmtqtzwvtu2h --discovery-token-ca-cert-hash sha256:0408fc4999c96ec15c706ce6c01612d3b7f53713dbc5ccdb875545a67f6f7f1f
